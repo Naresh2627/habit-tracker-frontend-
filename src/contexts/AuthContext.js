@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
         name,
-        callbackURL: window.location.origin + '/'
+        callbackURL: window.location.origin
       });
 
       if (result.error) {
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
       const result = await betterAuthSignIn.email({
         email,
         password,
-        callbackURL: window.location.origin + '/'
+        callbackURL: window.location.origin
       });
 
       if (result.error) {
@@ -101,7 +101,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const result = await betterAuthSignIn.social({
         provider: 'google',
-        callbackURL: window.location.origin + '/'
+        callbackURL: window.location.origin
       });
 
       if (result.error) {
